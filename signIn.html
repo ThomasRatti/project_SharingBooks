@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booke Sharing - Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;	
+        }
+
+        body {
+            background: linear-gradient(#ac6830cb, #633309);
+            height: 100vh;
+            font-family: Raleway, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .screen {		
+            background-image: url('images/bk-login.jpg');
+            background-size: auto 100%;
+            background-position: center;	
+            position: relative;	
+            height: 100vh;
+            width: 100vw;	
+            text-align: -webkit-center;
+            padding-top: 80px;
+        }
+
+        .login {
+            width: 320px;
+            padding-top: 35px;
+            margin: 20px;
+        }
+
+        .login__field {
+            padding: 20px 0px;	
+            position: relative;	
+        }
+
+        ::-webkit-input-placeholder {
+            font-style: italic;
+            color:#000000;
+        }
+
+        .login__icon {
+            position: absolute;
+            top: 30px;
+            color: #000000;
+        }
+
+        .login__input {
+            border: none;
+            border-bottom: 2px solid #000000;
+            background: none;
+            padding: 10px;
+            padding-left: 24px;
+            font-weight: 700;
+            width: 75%;
+            transition: .2s;
+        }
+
+        .login__input:active,
+        .login__input:focus,
+        .login__input:hover {
+            outline: none;
+            border-bottom-color: #ffffff;
+        }
+
+        .login__submit {
+            background: #fff;
+            font-size: 14px;
+            margin-top: 30px;
+            padding: 16px 20px;
+            border-radius: 26px;
+            border: 1px solid #D4D3E8;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: #000000;
+            box-shadow: 0px 2px 2px #000000;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .login__submit:active,
+        .login__submit:focus,
+        .login__submit:hover {
+            border-color: #000000;
+            outline: none;
+        }
+
+
+        @media screen and (min-width: 771px) {
+                .container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100vh;
+                }
+                .screen {		
+                    background-image: url('images/bk-login.jpg');
+                    background-size: auto 100%;
+                    background-position: center;	
+                    position: relative;	
+                    height: 735px;
+                    width: 435px;	
+                    box-shadow: 0px 0px 24px #967142;
+                    padding-top: 0px;
+                }
+            }
+    </style>
+</head>
+<body link="white" vlink="white" alink="white">
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="signIn.php" method="get">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Nome" name="nome">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Cognome" name="cognome">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="date" class="login__input" placeholder="DataNascita" name="dataNascita">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Indirizzo" name="indirizzo">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Residenza" name="residenza">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Email" name="email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password" name="password">
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Registrati</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>   
+            </div>
+        </div>
+    </div>
+</body>
+</html>
